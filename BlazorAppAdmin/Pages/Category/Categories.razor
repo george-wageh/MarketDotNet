@@ -1,0 +1,10 @@
+﻿@page "/categories"
+@layout AdminLayout
+<h3>Categories</h3>
+@if (categoryNodeRoot != null)
+{
+    <div>
+        <CategoryNodeComponent OpenEdit="OpenEdit" categoryNode="categoryNodeRoot" />
+    </div>
+    <EditCategory OnSaveChanges="OnSaveCategory" Item="CategoryEditable"></EditCategory>
+}

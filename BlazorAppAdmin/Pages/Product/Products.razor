@@ -1,0 +1,118 @@
+﻿@page "/products"
+<div>
+    @if (Messages != null)
+    {
+        foreach (var message in Messages)
+        {
+            <div class="alert @(message?.Success == true ? "alert-success" : "alert-danger")" role="alert">
+                @message.Message
+            </div>
+        }
+    }
+</div>
+
+
+<div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button  @(AccordionShow?"":"collapsed")" type="button" @onclick="() => ToggleAccordion()"
+                aria-expanded="collapseTwo" aria-controls="collapseTwo">
+            Filters
+        </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse @(AccordionShow?"show":"")"
+         aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+
+
+        <div class="accordion-body row align-content-center">
+            <div class="col-12 col-md-12 col-lg-6">
+                <div class="row justify-content-center mb-2">
+
+                    <div>
+                        <Categories CategoryId="CategoryId" OnChangeCategory="OnChangeCategory"></Categories>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-3">
+                    <label class="form-check-label">Search</label>
+                    <div class="input-group">
+                        <input type="search" @bind-value="Qstring" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <button @onclick="Search" type="button" class="btn btn-outline-primary" data-mdb-ripple-init>Search</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-12 col-lg-6 align-content-center">
+                <div class="row justify-content-center mx-1 mb-3">
+                    <div class="input-group justify-content-center border border-1 border-secondary-subtle rounded-1">
+                        <label class="form-check-label me-4">Sort: </label>
+                        <div class="form-check">
+                            <input class="form-check-input" @onchange='()=>ChangeSort($"DefaultSort")' checked='@(this.SortBy =="DefaultSort")' type="radio" name="sortOptions" id="DefaultSort"  />
+                            <label class="form-check-label me-3" for="DefaultSort">Default</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" @onchange='()=>ChangeSort($"PriceHighLow")' checked='@(this.SortBy =="PriceHighLow")' type="radio" name="sortOptions" id="PriceHighLow" />
+                            <label class="form-check-label me-3" for="PriceHighLow">Price (High to Low)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" @onchange='()=>ChangeSort($"PriceLowHigh")' checked='@(this.SortBy =="PriceLowHigh")' type="radio" name="sortOptions" id="PriceLowHigh" />
+                            <label class="form-check-label me-3" for="PriceLowHigh">Price (Low to High)</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row justify-content-center mx-1 mb-2">
+                    <div class="input-group justify-content-center border border-1 border-secondary-subtle rounded-1">
+                        <label class="form-check-label me-4">Select: </label>
+                        <div class="form-check">
+                            <input class="form-check-input" @onchange="()=>SelectCount(5)" checked='@(this.Count == 5)' type="radio" name="SelectCount" id="selectFive" />
+                            <label class="form-check-label me-3" for="selectFive">5 items</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" @onchange="()=>SelectCount(10)" checked='@(this.Count ==10)' type="radio" name="SelectCount" id="selectTen" />
+                            <label class="form-check-label me-3" for="selectTen">10 items</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" @onchange="()=>SelectCount(20)" checked='@(this.Count ==20)' type="radio" name="SelectCount" id="selectTwenty" />
+                            <label class="form-check-label me-3" for="selectTwenty">20 items</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+@if (this.productToDelete != null)
+
+{
+    <ConfirmDeleteProduct OnSaveChanges="ConfirmDelete" Item="productToDelete"></ConfirmDeleteProduct>
+
+}
+@if (ProductsList != null)
+{
+
+    <ItemsList OnProductDelete="OpenDeleteAlart" products="ProductsList"></ItemsList>
+    <div class="mt-3">
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" @onclick="() => PreviousPage()">Previous</a></li>
+                @for (int item = 0; item < (int)Math.Ceiling((double)AllCount / Count); item++)
+                {
+                    var currentPage = item + 1; // Capture the correct value
+                    <li class="page-item">
+                        <a class="page-link" @onclick="() => ChangePage(currentPage)">@currentPage</a>
+                    </li>
+                }
+                <li class="page-item"><a class="page-link" @onclick="() => NextPage()">Next</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+
+}
+else
+{
+    <div>Loading</div>
+}

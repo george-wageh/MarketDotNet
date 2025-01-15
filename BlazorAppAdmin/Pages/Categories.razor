@@ -1,0 +1,33 @@
+﻿@if (categoryNodeRoot != null)
+{
+    <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button  @(accordionShow?"":"collapsed")" type="button" @onclick="() => ToggleAccordion()"
+                aria-expanded="collapseTwo" aria-controls="collapseTwo">
+            Categories
+        </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse @(accordionShow?"show":"")"
+         aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+
+
+        <div class="accordion-body align-content-center CategoriesBody">
+            <a @onclick="()=>BackCategory()" class="btn btn-secondary d-block" style="padding-top:2px; width:fit-content;">Back</a>
+            <a class="btn btn-primary disabled d-block m-2 mx-3" style="padding-top:2px; width:fit-content;">@categoryNodeRoot.Name</a>
+            <div class="m-2 mx-5 d-block">
+                @foreach (var item in categoryNodeRoot.children)
+                {
+                    <a @onclick="()=>onSelectCategory(item.Id)" class="btn btn-outline-primary m-1" style="padding-top:2px; width:fit-content;">@item.Name</a>
+                }
+            </div>
+          
+
+        </div>
+    </div>
+
+}
+<style>
+    .CategoriesBody{
+        max-height: 216px;
+        overflow-y: auto;
+    }
+</style>

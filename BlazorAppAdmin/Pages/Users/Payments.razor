@@ -1,0 +1,105 @@
+﻿@page "/users/payments/{userName}"
+@layout AdminLayout
+<h3>Payments</h3>
+<div class="row justify-content-center">
+    @if (paymentCardDTOs != null)
+    {
+        @foreach (var card in paymentCardDTOs)
+        {
+            <div class="card m-2" style="width: fit-content;">
+                <label class="form-check-label btn PaymentCard @(card.IsDefault == true?"selected_":"")">
+                    <div class="card-body visaCard p-1">
+                        <img src="imgs/dialog-selected.svg" class="selectIcon @(card.IsDefault == true?"selectedIcon":"")" />
+
+                        <img class="visaImg" src="imgs/VisaLogo.png" />
+                        <div class="sim"></div>
+                        <div class="Visa4Digits">
+                            **** **** **** @card.Last4digits
+                            <br>
+                            <div>
+                                <div style="font-size:medium; text-align:right;">
+                                    @card.ExpDate
+                                </div>
+                                <div style="font-size:medium; text-align:left;">
+                                    @card.Name
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </label>
+
+            </div>
+        }
+
+    }
+
+
+</div>
+<style>
+    .sim{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: #c9b20c;
+        top: 103px;
+        left: 46px;
+        border-radius: 5px;
+        border: solid 1px #3d1818;
+
+    }
+    .visaImg{
+        width: 60px;
+        position: absolute;
+        bottom: 30px;
+        right: 47px;
+    
+    }
+    .visaCard{
+        width: 340px;
+        height: 216px;
+        background-color: #dbdbdb;
+        border: solid 2px gray;
+        border-radius: 19px;
+    }
+
+    .Visa4Digits{
+        font-size: x-large;
+        position: absolute;
+        margin: auto;
+        left: 112px;
+        right: auto;
+        top: 76px;
+    }
+
+</style>
+
+
+<style>
+    .selectIcon {
+        display: none;
+        width: 44px;
+        position: absolute;
+        top: 23px;
+        left: 39px;
+    }
+
+    .selectedIcon {
+        display: block;
+    }
+
+    .PaymentCard{
+        cursor: auto !important;
+        pointer-events: none;
+    }
+    .selected_ {
+        opacity: 0.9;
+        cursor: auto;
+        pointer-events: none;
+    }
+
+    .cardMessageImg {
+        width: 300px;
+        height: 200px;
+    }
+</style>

@@ -1,0 +1,26 @@
+﻿@inherits ComponentModel<AddressDTO>
+
+@if (Item != null)
+{
+    <div id="modal" class="modal @(isModalVisible ? "show d-block" : "")" style="background-color:rgba(0,0,0,0.5);">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Are you sure to delete this address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" @onclick="HideModal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="card-title">@Item.FullName</h5>
+                    <p class="card-title">@Item.City</p>
+                    <p class="card-title">@Item.Country</p>
+                    <p class="card-title">@Item.PostalCode</p>
+                    <p class="card-title">@Item.StreetAddress</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" @onclick="HideModal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick="SaveAsync">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

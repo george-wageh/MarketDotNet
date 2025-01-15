@@ -1,0 +1,67 @@
+﻿@inherits ComponentModel<PaymentDTO>
+
+<div class="text-lg-center">
+    <button type="button" @onclick="this.ShowModal" class="btn btn-primary">
+        Add new payment card
+    </button>
+</div>
+
+<div id="modal" class="modal @(isModalVisible ? "show d-block" : "")" style="background-color: rgba(0,0,0,0.5);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Add new payment</h1>
+                <button type="button" @onclick="this.HideModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Hidden Inputs -->
+                <input type="hidden" id="ID_" formControlName="ID_" @bind="Item.Id" />
+                <input type="hidden" id="IsDefault_" formControlName="IsDefault_" @bind="Item.IsDefault" />
+
+                <!-- Cardholder Name -->
+                <EditForm Model="Item" OnValidSubmit="SaveAsync">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+
+                    <!-- Cardholder Name -->
+                    <div class="mb-3">
+                        <label for="cardHolderName" class="form-label">Cardholder Name</label>
+                        <InputText id="cardHolderName" class="form-control" placeholder="Enter full name" @bind-Value="Item.Name" />
+                        <ValidationMessage For="@(() => Item.Name)" />
+                    </div>
+
+                    <!-- Card Number -->
+                    <div class="mb-3">
+                        <label for="cardNumber" class="form-label">Card Number</label>
+                        <InputText id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" @bind-Value="Item.CardNumber" />
+                        <ValidationMessage For="@(() => Item.CardNumber)" />
+                    </div>
+
+                    <!-- Expiration Date -->
+                    <div class="mb-3">
+                        <label for="expDate" class="form-label">Expiration Date</label>
+                        <input type="month" id="expDate" class="form-control"
+                        @bind-value="Item.ExpDate"
+                               min='@DateTime.Now.AddMonths(1).ToString("yyyy-MM")' />
+                        <ValidationMessage For="@(() => Item.ExpDate)" />
+                    </div>
+
+                    <!-- CVV Code -->
+                    <div class="mb-3">
+                        <label for="cvvCode" class="form-label">CVV Code</label>
+                        <InputText id="cvvCode" class="form-control" placeholder="123" @bind-Value="Item.CVVCode" />
+                        <ValidationMessage For="@(() => Item.CVVCode)" />
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Add Payment</button>
+                    </div>
+                </EditForm>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" @onclick="HideModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

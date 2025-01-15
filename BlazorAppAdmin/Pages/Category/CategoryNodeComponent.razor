@@ -1,0 +1,11 @@
+﻿<div class="p-2" style="border-left:solid 1px black;">
+    <a class="btn link-dark btn-link" @onclick="()=>OpenEdit.InvokeAsync(categoryNode)"><h5>@categoryNode.Name</h5></a>
+    <div>
+        @foreach (var x in categoryNode.children)
+        {
+            <CategoryNodeComponent OpenEdit="OpenEdit" categoryNode="x"></CategoryNodeComponent>
+        }
+    </div>
+   
+
+</div>

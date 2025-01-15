@@ -1,0 +1,113 @@
+﻿@page "/payments"
+@layout UserLayout
+@if (message != null)
+{
+    <div class="alert @(message?.Success == true ? "alert-success" : "alert-danger")" role="alert">
+        @message.Message
+    </div>
+
+}
+
+<h3>Payments</h3>
+<AddPayment OnSaveChanges="HandleSaveNewPayment"></AddPayment>
+<ConfirmDeletePayment OnSaveChanges="HandleDeletePayment" Item="ModelToDelete"></ConfirmDeletePayment>
+<div class="row justify-content-center">
+    @if (paymentCardDTOs != null)
+    {
+        @foreach (var card in paymentCardDTOs)
+        {
+            <div class="card m-2" style="width: fit-content;">
+                <label class="form-check-label btn @(card.IsDefault == true?"selected_":"")" @onclick="() => setDefault(card.Id)">
+                    <div class="card-body visaCard p-1">
+                        <img src="imgs/dialog-selected.svg" class="selectIcon @(card.IsDefault == true?"selectedIcon":"")" />
+
+                        <img class="visaImg" src="imgs/VisaLogo.png" />
+                        <div class="sim"></div>
+                        <div class="Visa4Digits">
+                            **** **** **** @card.Last4digits
+                            <br>
+                            <div>
+                                <div style="font-size:medium; text-align:right;">
+                                    @card.ExpDate
+                                </div>
+                                <div style="font-size:medium; text-align:left;">
+                                    @card.Name
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </label>
+                <div class="row">
+                    <button class="btn btn-danger mx-2 col" @onclick="()=>DeletePayment(card.Id)">Delete</button>
+                </div>
+            </div>
+        }
+
+    }
+</div>
+
+
+<style>
+    .sim{
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: #c9b20c;
+        top: 103px;
+        left: 46px;
+        border-radius: 5px;
+        border: solid 1px #3d1818;
+
+    }
+    .visaImg{
+        width: 60px;
+        position: absolute;
+        bottom: 62px;
+        right: 47px;
+    
+    }
+    .visaCard{
+        width: 340px;
+        height: 216px;
+        background-color: #dbdbdb;
+        border: solid 2px gray;
+        border-radius: 19px;
+    }
+
+    .Visa4Digits{
+        font-size: x-large;
+        position: absolute;
+        margin: auto;
+        left: 121px;
+        right: auto;
+        top: 76px;
+    }
+
+</style>
+
+
+<style>
+    .selectIcon {
+        display: none;
+        width: 44px;
+        position: absolute;
+        top: 17px;
+        left: 35px;
+    }
+
+    .selectedIcon {
+        display: block;
+    }
+
+    .selected_ {
+        opacity: 0.9;
+        cursor: auto;
+        pointer-events: none;
+    }
+
+    .cardMessageImg {
+        width: 300px;
+        height: 200px;
+    }
+</style>

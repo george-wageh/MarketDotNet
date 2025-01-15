@@ -1,0 +1,43 @@
+﻿<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Count</th>
+                <th scope="col">Total</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Products != null)
+            {
+                @foreach (var product in Products)
+                {
+                    <tr class="">
+                        <td><img src="@product.ImageUrl" height="60" alt="" srcset=""></td>
+                        <td>@product.Name</td>
+                        <td>@product.Price</td>
+                        <td><input class="form-control" type="number" @onchange="(e)=>ChnageQuantity(product.Id , e.Value)" name="" id="" min="1" value="@product.Quantity"></td>
+                        <td>@(product.Quantity * product.Price)</td>
+                        <td><button class="btn btn-danger" @onclick="()=>Delete(product.Id)">Delete</button></td>
+                    </tr>
+                }
+            }
+    
+           
+        </tbody>
+    </table>
+
+    <div class="table-responsive mt-4">
+        <table class="table h5">
+            <tbody>
+                <tr class="">
+                    <td>Total</td>
+                    <td>@((Products != null)?Products.Aggregate(0.0, (s, x) => s+(double)(x.Price * x.Quantity)) : "0")</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

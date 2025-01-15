@@ -1,0 +1,24 @@
+﻿@inherits ComponentModel<ProductCardDTO>
+
+@if (Item != null)
+{
+    <div id="modal" class="modal @(isModalVisible ? "show d-block" : "")" style="background-color:rgba(0,0,0,0.5);">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Are you sure to delete this product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" @onclick="HideModal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="card-title">@Item.Name</h5>
+                    <img src="@Item.ImageUrl" class="card-img-top" alt="..." style="width: 100%; height: 100%; object-fit: contain;">
+                    <p class="card-title">$@Item.Price</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" @onclick="HideModal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" @onclick="SaveAsync">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

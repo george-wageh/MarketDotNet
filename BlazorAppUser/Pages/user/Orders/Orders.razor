@@ -1,0 +1,57 @@
+﻿@page "/orders"
+@layout UserLayout
+<h3>Orders</h3>
+@if (OrdersList != null)
+{
+    <div class="row">
+        @foreach (var order in OrdersList)
+        {
+            <div style="border-color:#adadad !important" class="col-12 border border-1 rounded-2 mt-3">
+
+                <div class="row justify-content-between p-3 pb-0">
+                    <div class="col-6 text-start">
+                        <h5 class="text-success">
+                            Order#@order.Id
+                        </h5>
+                        <div>
+                            @order.CreationDate
+                        </div>
+                        <div class="mt-1">
+                            <a href="/orders/@order.Id">View order details</a>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div>
+                            Products price: @order.Total
+                        </div>
+                        <div>
+                            Ship price: @order.ShipPrice
+                        </div>
+                        <div>
+                            Total: @(order.Total + order.ShipPrice)
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <hr />
+
+                <div class="row">
+                    @foreach (var image in order.productImages)
+                    {
+                        <div class="" style="width:120px; height:170px;">
+                            <img style="width: 100%; height: 100%; object-fit: contain;" src="@image" />
+
+                        </div>
+
+                    }
+                </div>
+
+
+            </div>
+        }
+    </div>
+
+}

@@ -1,0 +1,22 @@
+﻿<div class="row mt-4">
+    <div class="col-md-12">
+        <h3>Comments</h3>
+        @if (Comments_?.Count() > 0)
+        {
+            <ul class="list-group">
+                @foreach (var comment in Comments_)
+                {
+                    <li class="list-group-item">
+                        <strong>@comment.UserName:</strong>
+                        <div>@comment.CommentTitle</div>
+                        @comment.CommentText
+                    </li>
+                }
+            </ul>
+        }
+        else      
+        {
+            <p class="text-muted">No comments available.</p>
+        }
+    </div>
+</div>

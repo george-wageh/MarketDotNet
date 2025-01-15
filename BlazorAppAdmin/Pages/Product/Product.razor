@@ -1,0 +1,37 @@
+﻿@page "/products/{id:int}";
+@layout AdminLayout
+@if (message != null)
+{
+    <div class="alert @(message?.Success == true ? "alert-success" : "alert-danger")" role="alert">
+        @message.Message
+    </div>
+}
+
+@if (ProductDTO == null)
+{
+    <div>Loading*-----------</div>
+}
+else
+{
+
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Product Image -->
+            <div class="col-md-4">
+                <img src="@ProductDTO.ImageUrl" alt="@ProductDTO.Name" class="img-fluid rounded">
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-8">
+                <h1>@ProductDTO.Name</h1>
+                <h4 class="text-primary">$@ProductDTO.Price</h4>
+                <p>@ProductDTO.Description</p>
+
+            </div>
+        </div>
+
+        <hr>
+        <Comments productId="ProductDTO.Id"/>
+    </div>
+
+}

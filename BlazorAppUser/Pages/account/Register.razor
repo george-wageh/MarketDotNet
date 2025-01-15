@@ -1,0 +1,36 @@
+﻿@page "/register"
+@layout NoSidebarLayout
+@if (message != null)
+{
+    <MessageAlert Message="message"/>    
+}
+<div class="shadow-sm py-4 border border-1">
+    <h4 class="text-center">Register page</h4>
+    <EditForm OnValidSubmit="ValidSubmit" Model="this.UserRegister">
+        <DataAnnotationsValidator/>
+        <ValidationSummary/>
+        <div class="m-2">
+            <label for="fullname">Full name</label>
+            <InputText class="form-control" id="fullname" @bind-Value="this.UserRegister.FullName"></InputText>
+            <ValidationMessage For="()=>UserRegister.FullName"></ValidationMessage>
+        </div>
+        <div class="m-2">
+            <label for="phone">Phone</label>
+            <InputText class="form-control" id="phone" @bind-Value="this.UserRegister.Phone"></InputText>
+            <ValidationMessage For="()=>UserRegister.Phone"></ValidationMessage>
+        </div>
+        <div class="m-2">
+            <label for="email">Email</label>
+            <InputText class="form-control" id="email" @bind-Value="this.UserRegister.Email"></InputText>
+            <ValidationMessage For="()=>UserRegister.Email"></ValidationMessage>
+        </div>
+        <div class="m-2">
+            <label for="password">Password</label>
+            <InputText class="form-control" id="password" type="password" @bind-Value="this.UserRegister.Password"></InputText>
+            <ValidationMessage For="()=>UserRegister.Password"></ValidationMessage>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Signup</button>
+        </div>
+    </EditForm>
+</div>

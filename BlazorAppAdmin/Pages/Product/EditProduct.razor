@@ -1,0 +1,52 @@
+﻿@page "/editProduct/{Id:int}"
+<h3>Edit product</h3>
+@if (Message != null)
+{
+    <MessageAlert Message="Message" />
+}
+@if (Product!=null)
+{
+    <EditForm OnValidSubmit="HandleValidSubmit" EditContext="editContext">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div>
+
+            <div class="mb-2">
+                <img src="@ImageToView" alt="Selected Image" style="max-width: 300px; max-height: 300px;" />
+                <InputFile type="file" OnChange="OnFileSelected" />
+                <ValidationMessage For="@(() => this.SelectedFile)" />
+                <button class="btn btn-danger" type="button" @onclick="RemoveImage">Remove image</button>
+            </div>
+
+        </div>
+
+        <div>
+            <label for="name">Name:</label>
+            <InputText id="name" @bind-Value="Product.Name" class="form-control" />
+            <ValidationMessage For="@(() => Product.Name)" />
+        </div>
+
+        <div>
+            <label for="description">Description:</label>
+            <InputText id="description" @bind-Value="Product.Description" class="form-control" />
+            <ValidationMessage For="@(() => Product.Description)" />
+        </div>
+
+        <div>
+            <label for="price">Price:</label>
+            <InputNumber id="price" @bind-Value="Product.Price" class="form-control" />
+            <ValidationMessage For="@(() => Product.Price)" />
+        </div>
+
+        <div>
+            @if (CategoryId!=null)
+            {
+                <Categories CategoryId="CategoryId" OnChangeCategory="OnChangeCategory"></Categories>
+            }
+            <ValidationMessage For="@(() => Product.CategoryId)" />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </EditForm>
+}

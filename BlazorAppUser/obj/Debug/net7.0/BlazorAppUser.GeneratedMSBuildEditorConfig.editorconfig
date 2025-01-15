@@ -1,0 +1,161 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BlazorAppUser
+build_property.RootNamespace = BlazorAppUser
+build_property.ProjectDir = C:\Users\George\source\repos\MarketProjectDotNet\BlazorAppUser\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\George\source\repos\MarketProjectDotNet\BlazorAppUser
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/account/ForgetPassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWNjb3VudFxGb3JnZXRQYXNzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/account/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWNjb3VudFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/account/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWNjb3VudFxSZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/MessageAlert.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVzc2FnZUFsZXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Address/AddAddress.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxBZGRyZXNzXEFkZEFkZHJlc3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Address/Address.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxBZGRyZXNzXEFkZHJlc3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Address/ConfirmDeleteAddress.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxBZGRyZXNzXENvbmZpcm1EZWxldGVBZGRyZXNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Address/EditAddress.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxBZGRyZXNzXEVkaXRBZGRyZXNzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Cart/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxDYXJ0XENhcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Cart/SelectAddress.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxDYXJ0XFNlbGVjdEFkZHJlc3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Cart/SelectPayment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxDYXJ0XFNlbGVjdFBheW1lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Cart/SelectProducts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxDYXJ0XFNlbGVjdFByb2R1Y3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Cart/Summary.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxDYXJ0XFN1bW1hcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/FavoriteProducts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxGYXZvcml0ZVByb2R1Y3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/ItemsList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxJdGVtc0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Orders/Order.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxPcmRlcnNcT3JkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Orders/Orders.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxPcmRlcnNcT3JkZXJzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Payments/AddPayment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQYXltZW50c1xBZGRQYXltZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Payments/ConfirmDeletePayment.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQYXltZW50c1xDb25maXJtRGVsZXRlUGF5bWVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Payments/Payments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQYXltZW50c1xQYXltZW50cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Products/Categories.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQcm9kdWN0c1xDYXRlZ29yaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Products/CategoryNodeComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQcm9kdWN0c1xDYXRlZ29yeU5vZGVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Products/Products.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQcm9kdWN0c1xQcm9kdWN0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Product/Comments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQcm9kdWN0XENvbW1lbnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Product/Product.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQcm9kdWN0XFByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Pages/user/Profile/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcdXNlclxQcm9maWxlXFByb2ZpbGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Shared/NoSidebarLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5vU2lkZWJhckxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Shared/UserLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFVzZXJMYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-s00jycqz91
+
+[C:/Users/George/source/repos/MarketProjectDotNet/BlazorAppUser/Shared/UserNavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFVzZXJOYXZNZW51LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-1emzjte5pu

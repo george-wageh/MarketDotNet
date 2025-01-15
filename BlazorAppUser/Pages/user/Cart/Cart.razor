@@ -1,0 +1,156 @@
+﻿@page "/cart"
+@layout UserLayout
+<h1>Cart</h1>
+<div>
+    @if (Messages != null)
+    {
+        foreach (var message in Messages)
+        {
+            <div class="alert @(message?.Success == true ? "alert-success" : "alert-danger")" role="alert">
+                @message.Message
+            </div>
+        }
+    }
+</div>
+@if (Products?.Count() > 0)
+{
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+
+            @if (this.NextPageCount == 1)
+            {
+                <h2 class="accordion-header">
+                    <button class="accordion-button text-dark" disabled type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Products
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <SelectProducts Products="Products" OnProductsChanged="UpdateProducts"></SelectProducts>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <h2 class="accordion-header">
+                    <button class="accordion-button text-dark collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Products
+                    </button>
+                </h2>
+            }
+
+        </div>
+
+        <div class="accordion-item">
+            @if (this.NextPageCount == 2)
+            {
+                <h2 class="accordion-header">
+                    <button class="accordion-button text-dark" disabled type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Address to ship
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <SelectAddress address="address"></SelectAddress>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <h2 class="accordion-header">
+                    <button class="accordion-button text-dark collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Address to ship
+                    </button>
+                </h2>
+            }
+
+        </div>
+
+        <div class="accordion-item">
+            @if (this.NextPageCount == 3 && this.address != null)
+            {
+                <h2 class="accordion-header">
+                    <button class="accordion-button text-dark" disabled type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        Select payment
+                    </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <SelectPayment payment="payment"></SelectPayment>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <h2 class="accordion-header">
+                    <button class="accordion-button text-dark collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                        Select payment
+                    </button>
+                </h2>
+            }
+
+        </div>
+
+        <div class="accordion-item">
+            @if (this.NextPageCount == 4 && this.payment != null)
+            {
+                <h2 class="accordion-header">
+                    <button class="accordion-button text-dark" disabled type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        Summary
+                    </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <Summary payment="payment" Products="Products" address="address"></Summary>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <h2 class="accordion-header">
+                    <button class="accordion-button text-dark collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                        Summary
+                    </button>
+                </h2>
+            }
+
+        </div>
+
+
+
+        @if (this.NextPageCount == 4)
+        {
+            <div class="text-end">
+                <button class="btn btn-success w-100 mt-2" @onclick="PlaceOrder">Place order</button>
+            </div>
+
+        }
+        else
+        {
+            @if (this.address == null)
+            {
+                <div class="text-center">
+                    <div class="alert alert-primary w-100 mt-2">Please select address</div>
+                </div>
+            }
+            else if (this.payment == null)
+            {
+                <div class="text-center">
+                    <div class="alert alert-primary w-100 mt-2" >Please select payment</div>
+                </div>
+            }
+            else
+            {
+                <div class="text-end">
+                    <button class="btn btn-primary w-100 mt-2" @onclick="nextPage">Next</button>
+                </div>
+            }
+        }
+
+    </div>
+
+}
+else
+{
+    <div>Not products in cart</div>
+}

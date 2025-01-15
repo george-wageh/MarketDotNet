@@ -1,0 +1,128 @@
+﻿<div>
+    @if (address != null && payment != null)
+    {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">_</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td>Products price</td>
+                        <td>@PTotal</td>
+                    </tr>
+                    <tr class="">
+                        <td>Ship price</td>
+                        <td>@ShipPrice</td>
+                    </tr>
+                    <tr>
+                        <td class="text-dark h5">Total</td>
+                        <td class="text-dark h5">@(ShipPrice + PTotal)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br>
+
+        <div class="row justify-content-center">
+
+            <div class="card m-2" style="width: 322px; text-align:center;">
+                <label style="font-weight: bold;">Address</label>
+
+                <img class="cardMessageImg" src="imgs/paperMessage.jpg" />
+                <div class="MessageCardHeader">
+                    <h5 class="card-title">@address.FullName</h5>
+                    <h6 class="card-title">@address.Phone</h6>
+                </div>
+                <div>
+                </div>
+                <div class="MessageCardContent">
+                    @address.StreetAddress / @address.City / @address.Country / @address.PostalCode
+                </div>
+
+            </div>
+            <div class="card m-2" style="width: 368px;">
+                <label style="font-weight: bold;text-align:center;">Payment</label>
+                <div class="visaCard p-1">
+                    <img class="visaImg" src="imgs/VisaLogo.png" />
+                    <div class="sim"></div>
+                    <div class="Visa4Digits">
+                        **** **** **** @payment.Last4digits
+                        <br>
+                        <div>
+                            <div style="font-size:medium; text-align:right;">
+                                @payment.ExpDate
+                            </div>
+                            <div style="font-size:medium; text-align:left;">
+                                @payment.Name
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>
+<style>
+    .cardMessageImg {
+        width: 300px;
+        height: 200px;
+    }
+
+    .MessageCardHeader {
+        position: absolute;
+        top: 60px;
+        width: 300px;
+    }
+
+    .MessageCardContent {
+        position: absolute;
+        top: 130px;
+        width: 300px;
+    }
+</style>
+
+
+<style>
+    .sim {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: #c9b20c;
+        top: 114px;
+        left: 46px;
+        border-radius: 5px;
+        border: solid 1px #3d1818;
+    }
+
+    .visaImg {
+        width: 60px;
+        position: absolute;
+        bottom: 30px;
+        right: 33px;
+    }
+
+    .visaCard {
+        width: 340px;
+        height: 216px;
+        background-color: #dbdbdb;
+        border: solid 2px gray;
+        border-radius: 19px;
+    }
+
+    .Visa4Digits {
+        font-size: x-large;
+        position: absolute;
+        margin: auto;
+        left: 112px;
+        right: auto;
+        top: 88px;
+    }
+
+</style>

@@ -1,0 +1,75 @@
+﻿@page "/addProduct"
+@layout AdminLayout
+@if (Message != null)
+{
+    <MessageAlert Message="Message" />
+}
+<h3>Add product</h3>
+@* <div>
+
+
+  
+    <div class="my-3">
+        <label class="form-label">Name</label>
+        <input @bind-value="Product.Name"  type="text" />
+    </div>
+    <div class="my-3">
+        <label class="form-label">Description</label>
+        <input @bind-value="Product.Description"  type="text" />
+    </div>
+
+    <div>
+        <div class="my-3">
+        </div>
+        <ValidationMessage For="@(() => Product.CategoryId)" />
+
+    </div>
+
+
+    <div class="my-2">
+        <label class="form-label">Price</label>
+        <input @bind-value="Product.Price" class="form-control" type="number" />
+    </div>
+
+
+</div> *@
+<EditForm OnValidSubmit="HandleValidSubmit" EditContext="editContext" >
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div>
+
+        <div class="mb-2">
+            <img src="@ImageToView" alt="Selected Image" style="max-width: 300px; max-height: 300px;" />
+            <InputFile type="file" OnChange="OnFileSelected" />
+            <ValidationMessage For="@(() => this.SelectedFile)" />
+        </div>
+
+    </div>
+
+    <div>
+        <label for="name">Name:</label>
+        <InputText id="name" @bind-Value="Product.Name" class="form-control" />
+        <ValidationMessage For="@(() => Product.Name)" />
+    </div>
+
+    <div>
+        <label for="description">Description:</label>
+        <InputText id="description" @bind-Value="Product.Description" class="form-control" />
+        <ValidationMessage For="@(() => Product.Description)" />
+    </div>
+
+    <div>
+        <label for="price">Price:</label>
+        <InputNumber id="price" @bind-Value="Product.Price" class="form-control" />
+        <ValidationMessage For="@(() => Product.Price)" />
+    </div>
+
+    <div>
+        <Categories CategoryId="CategoryId" OnChangeCategory="OnChangeCategory"></Categories>
+        <ValidationMessage For="@(() => Product.CategoryId)" />
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-danger" @onclick="Crear">Crear</button>
+</EditForm>

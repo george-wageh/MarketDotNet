@@ -1,0 +1,11 @@
+﻿<div class="p-2" style="border-left:solid 1px black;">
+    <a @onclick="()=>eventCallback.InvokeAsync(categoryNode.Id)" class="btn btn-outline-primary d-block" style="padding-top:2px; width:fit-content;">@categoryNode.Name</a>
+    <div>
+        @foreach (var x in categoryNode.children)
+        {
+            <CategoryNodeComponent eventCallback="eventCallback" categoryNode="x"></CategoryNodeComponent>
+        }
+    </div>
+   
+
+</div>

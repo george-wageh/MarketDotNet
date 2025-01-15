@@ -1,0 +1,89 @@
+﻿@page "/orders/{id:int}"
+@layout UserLayout
+@if (OrderDTO != null)
+{
+    <h3>Order details</h3>
+    <div style="border-color:#adadad !important" class="col-12 border border-1 rounded-2 mt-3">
+
+        <div class="row justify-content-between p-3 pb-0">
+            <div class="col-3 text-start">
+                <h5 class="text-success">
+                    Order#@OrderDTO.Id
+                </h5>
+                <div>
+                    @OrderDTO.CreationDate
+                </div>
+                <div class="mt-1">
+                    <a href="/orders">View all orders</a>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <h5>Summary</h5>
+                <div>
+                    Products price: $@OrderDTO.Total
+                </div>
+                <div>
+                    Ship price: $@OrderDTO.ShipPrice
+                </div>
+                <div>
+                    Total: $@(OrderDTO.Total + OrderDTO.ShipPrice)
+                </div>
+            </div>
+
+            <div class="col-3">
+                <h5>Ship to</h5>
+                <div>
+                    Name: @OrderDTO.Address.FullName
+                </div>
+                <div>
+                    Phone: @OrderDTO.Address.Phone
+                </div>
+                <div>
+                    Address: @OrderDTO.Address.StreetAddress
+                </div>
+                <div>
+                    City: @OrderDTO.Address.City , @OrderDTO.Address.PostalCode , @OrderDTO.Address.Country
+                </div>
+            </div>
+
+            <div class="col-3">
+                <h5>Payment</h5>
+                <div>
+                    Name: @OrderDTO.Payment.Name
+                </div>
+                <div>
+                    Card number: **** **** **** @OrderDTO.Payment.Last4digits
+                </div>
+                <div>
+                    Expire date: @OrderDTO.Payment.ExpDate
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div>
+        <div class="mt-3 mx-2">
+            Products in this order
+        </div>
+        @foreach (var product in OrderDTO.Products)
+        {
+            <div style="border-color:#adadad !important" class="row border-1 border border-secondary rounded-1 m-2 mb-1 mt-0 p-2">
+                <div class="col">
+                    <img src="@product.ImageUrl" style="width:130px;height:130px; object-fit:contain"  />
+                </div>
+                <div class="col">
+                    <p> @product.Name</p>
+                    <div>Unit price : $@product.Price</div>
+                    <div>Quantity : @product.Quantity</div>
+                    <div class="mt-1">
+                        <a href="/product/@product.Id">Go to product</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+}
+

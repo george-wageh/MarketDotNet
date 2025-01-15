@@ -1,0 +1,10 @@
+﻿@page "/categories/{id:int}"
+@layout AdminLayout
+@if (categoryDTO != null)
+{
+    <h3>@categoryDTO.Name Category</h3>
+    <div>
+        <CategoryProducts CategoryDTO="categoryDTO"></CategoryProducts>
+    </div>
+
+}

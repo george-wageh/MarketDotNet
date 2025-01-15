@@ -1,0 +1,72 @@
+﻿@inherits ComponentModel<AddressDTO>
+
+<div class="text-lg-center">
+    <button type="button" @onclick="this.ShowModal" class="btn btn-primary">
+        Add new address
+    </button>
+</div>
+
+<div id="modal" class="modal @(isModalVisible ? "show d-block" : "")" style="background-color: rgba(0,0,0,0.5);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Add new Address</h1>
+                <button type="button" @onclick="this.HideModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <input type="text" id="ID_" hidden class="form-control" formControlName="ID_" @bind="Item.Id" />
+                <input type="text" id="IsDefault_" hidden class="form-control" formControlName="IsDefault_" @bind="Item.IsDefault" />
+
+                <EditForm Model="Item" OnValidSubmit="SaveAsync">
+                    <DataAnnotationsValidator /> 
+                    <ValidationSummary />
+
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <InputText id="fullName" class="form-control" @bind-Value="Item.FullName" />
+                        <ValidationMessage For="@(() => Item.FullName)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label">Phone</label>
+                        <InputText id="phoneNumber" class="form-control" @bind-Value="Item.Phone" />
+                        <ValidationMessage For="@(() => Item.Phone)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="streetAddress" class="form-label">Street Address</label>
+                        <InputText id="streetAddress" class="form-control" @bind-Value="Item.StreetAddress" />
+                        <ValidationMessage For="@(() => Item.StreetAddress)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="city" class="form-label">City</label>
+                        <InputText id="city" class="form-control" @bind-Value="Item.City" />
+                        <ValidationMessage For="@(() => Item.City)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="postalCode" class="form-label">Postal Code</label>
+                        <InputText id="postalCode" class="form-control" @bind-Value="Item.PostalCode" />
+                        <ValidationMessage For="@(() => Item.PostalCode)" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <InputText id="country" class="form-control" @bind-Value="Item.Country" />
+                        <ValidationMessage For="@(() => Item.Country)" />
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Add Address</button>
+                    </div>
+                </EditForm>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" @onclick="HideModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

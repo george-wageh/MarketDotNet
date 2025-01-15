@@ -1,0 +1,44 @@
+﻿
+
+<div class="row justify-content-center">
+    @if (address != null)
+    {
+        <div class="card m-2" style="width: 322px; text-align:center;">
+
+            <img class="cardMessageImg" src="imgs/paperMessage.jpg" />
+            <div class="MessageCardHeader">
+                <h5 class="card-title">@address.FullName</h5>
+                <h6 class="card-title">@address.Phone</h6>
+            </div>
+            <div>
+            </div>
+            <div class="MessageCardContent">
+                @address.StreetAddress / @address.City / @address.Country / @address.PostalCode
+            </div>
+
+        </div>
+    }
+    <div class="text-center">
+        <button @onclick="GoToChangeAddress" class="btn btn-secondary">Change address</button>
+    </div>
+</div>
+
+
+<style>
+    .cardMessageImg {
+        width: 300px;
+        height: 200px;
+    }
+
+    .MessageCardHeader {
+        position: absolute;
+        top: 60px;
+        width: 300px;
+    }
+
+    .MessageCardContent {
+        position: absolute;
+        top: 130px;
+        width: 300px;
+    }
+</style>

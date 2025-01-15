@@ -1,0 +1,19 @@
+﻿@page "/favorite"
+<h3>Saved Products</h3>
+@layout UserLayout
+<div>
+    @if (Messages != null)
+    {
+        foreach (var message in Messages)
+        {
+            <div class="alert @(message?.Success == true ? "alert-success" : "alert-danger")" role="alert">
+                @message.Message
+            </div>
+        }
+    }
+</div>
+
+@if (Products != null)
+{
+    <ItemsList EventAddToCart="OnAddedToCart" EventAddProductToFav="OnRemovedFromFav" products="Products"></ItemsList>
+}

@@ -1,0 +1,81 @@
+﻿@page "/users/addresses/{UserName}"
+@layout AdminLayout
+
+
+<h3>Addresses</h3>
+<div class="row justify-content-center">
+    @if (addresses != null)
+    {
+        @foreach (var address in addresses)
+        {
+            <div class="card m-2" style="width: fit-content;">
+                <label class="form-check-label btn addressCard">
+
+                    <div class="card-body p-1">
+                        <img src="imgs/dialog-selected.svg" class="selectIcon @(address.IsDefault == true?"selectedIcon":"")" />
+                        <img class="cardMessageImg" src="imgs/paperMessage.jpg" />
+                        <div class="MessageCardHeader">
+                            <h5 class="card-title">@address.FullName</h5>
+                            <h6 class="card-title">@address.Phone</h6>
+                        </div>
+                        <div>
+
+                        </div>
+                        <div class="MessageCardContent">
+                            @address.StreetAddress / @address.City / @address.Country / @address.PostalCode
+                        </div>
+
+                    </div>
+                </label>
+
+            </div>
+        }
+    }
+
+
+</div>
+
+<style>
+    .addressCard{
+        cursor: auto !important;
+        pointer-events: none;
+    }
+    .selectIcon {
+        display:none;
+        width: 44px;
+        position: absolute;
+        top: 23px;
+        left: 39px;
+    }
+
+    .selectedIcon{
+        display:block;
+    }
+
+    .selected_{
+        opacity : 0.9;
+        cursor:auto;
+        pointer-events: none;
+
+    }
+    .cardMessageImg{
+        width: 300px;
+        height: 200px;
+    }
+    .cardMessage{
+
+    }
+
+    .MessageCardHeader{
+        position: absolute;
+        top:65px;
+        width: 300px;
+    }
+    .MessageCardContent{
+    position:absolute;
+        top:130px;
+        width: 300px;
+    }
+</style>
+
+ 

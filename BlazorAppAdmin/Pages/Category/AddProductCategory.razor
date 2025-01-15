@@ -1,0 +1,47 @@
+﻿@inherits ComponentModel<ProductDTO>
+
+<div class="text-lg-center">
+    <button type="button" @onclick="this.ShowModal" class="btn btn-primary">
+        Add new product
+    </button>
+</div>
+
+<div id="modal" class="modal @(isModalVisible ? "show d-block" : "")" style="background-color: rgba(0,0,0,0.5);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Add new Address</h1>
+                <button type="button" @onclick="this.HideModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="mb-3">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" id="Name" class="form-control" formControlName="Name" @bind="Item.Name" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="streetAddress" class="form-label">Price</label>
+                    <input type="text" id="Price" class="form-control" formControlName="Price" @bind="Item.Price" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="ImageUrl" class="form-label">Image url</label>
+                    <input type="text" id="ImageUrl" class="form-control" formControlName="ImageUrl" @bind="Item.ImageUrl" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Description</label>
+                    <input type="text" id="Description" class="form-control" formControlName="Description" @bind="Item.Description" />
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" @onclick="SaveAsync">Add Address</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" @onclick="HideModal" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

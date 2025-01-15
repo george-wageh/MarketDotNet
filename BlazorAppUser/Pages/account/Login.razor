@@ -1,0 +1,35 @@
+﻿@page "/login"
+@layout NoSidebarLayout
+@if (message != null)
+{
+    <MessageAlert Message="message" />
+
+}
+<div class="shadow-sm py-4 border border-1">
+    <h4 class="text-center">Login page</h4>
+
+    <EditForm Model="this.UserLogin" OnValidSubmit="ValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="m-2">
+            <label for="email"> Email: </label>
+            <InputText class="form-control" typeof="email" id="email" @bind-Value="this.UserLogin.Email"></InputText>
+            <ValidationMessage For="()=>UserLogin.Email"></ValidationMessage>
+        </div>
+        <div class="m-2">
+            <label for="password"> Password: </label>
+            <InputText class="form-control" type="password" id="password" @bind-Value="this.UserLogin.Password"></InputText>
+            <ValidationMessage For="()=>UserLogin.Password"></ValidationMessage>
+        </div>
+        <div class="m-2 text-center">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+        <div class="m-2 text-center">
+            <NavLink href="forget_password">Forget password</NavLink>
+        </div>
+        <div class="m-2 text-center">
+            <NavLink href="register">Register</NavLink>
+        </div>
+    </EditForm>
+
+</div>

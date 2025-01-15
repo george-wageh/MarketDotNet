@@ -1,0 +1,8 @@
+﻿<div class="alert @(Message?.Success == true ? "alert-success" : "alert-danger")" role="alert">
+    @Message.Message
+</div>
+
+@code {
+    [Parameter]
+    public ResponseDTO<object> Message { get; set; }
+}

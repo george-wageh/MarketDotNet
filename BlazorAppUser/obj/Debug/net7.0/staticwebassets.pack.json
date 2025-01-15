@@ -1,0 +1,153 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\obj\\Debug\\net7.0\\build-gz\\9BgKjPB6.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BlazorAppUser.styles.css",
+      "PackagePath": "staticwebassets\\BlazorAppUser.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\MainLayout.css",
+      "PackagePath": "staticwebassets\\css\\MainLayout.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\VisaLogo.png",
+      "PackagePath": "staticwebassets\\imgs\\VisaLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\address.svg",
+      "PackagePath": "staticwebassets\\imgs\\address.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\cart.svg",
+      "PackagePath": "staticwebassets\\imgs\\cart.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\dialog-selected.svg",
+      "PackagePath": "staticwebassets\\imgs\\dialog-selected.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\favourite.svg",
+      "PackagePath": "staticwebassets\\imgs\\favourite.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\home.svg",
+      "PackagePath": "staticwebassets\\imgs\\home.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\list.svg",
+      "PackagePath": "staticwebassets\\imgs\\list.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\orders.svg",
+      "PackagePath": "staticwebassets\\imgs\\orders.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\paperMessage.jpg",
+      "PackagePath": "staticwebassets\\imgs\\paperMessage.jpg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\payment.svg",
+      "PackagePath": "staticwebassets\\imgs\\payment.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\products.svg",
+      "PackagePath": "staticwebassets\\imgs\\products.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\profile.svg",
+      "PackagePath": "staticwebassets\\imgs\\profile.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\imgs\\sort.svg",
+      "PackagePath": "staticwebassets\\imgs\\sort.svg"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\George\\source\\repos\\MarketProjectDotNet\\BlazorAppUser\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BlazorAppUser.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.BlazorAppUser.props",
+      "PackagePath": "build\\BlazorAppUser.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorAppUser.props",
+      "PackagePath": "buildMultiTargeting\\BlazorAppUser.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.BlazorAppUser.props",
+      "PackagePath": "buildTransitive\\BlazorAppUser.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

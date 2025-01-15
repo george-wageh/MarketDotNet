@@ -1,0 +1,69 @@
+﻿
+
+<div class="row justify-content-center">
+    @if (payment != null)
+    {
+        <div class="card m-2" style="width: 366px;">
+            <div class="card-body visaCard p-1">
+                <img class="visaImg" src="imgs/VisaLogo.png" />
+                <div class="sim"></div>
+                <div class="Visa4Digits">
+                    **** **** **** @payment.Last4digits
+                    <br>
+                    <div>
+                        <div style="font-size:medium; text-align:right;">
+                            @payment.ExpDate
+                        </div>
+                        <div style="font-size:medium; text-align:left;">
+                            @payment.Name
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    }
+    <div class="text-center">
+        <button @onclick="GoToChangePayment" class="btn btn-secondary">Change payment</button>
+    </div>
+</div>
+
+<style>
+    .sim {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-color: #c9b20c;
+        top: 95px;
+        left: 46px;
+        border-radius: 5px;
+        border: solid 1px #3d1818;
+    }
+
+    .visaImg {
+        width: 60px;
+        position: absolute;
+        bottom: 30px;
+        right: 33px;
+    }
+
+    .visaCard {
+        width: 340px;
+        height: 216px;
+        background-color: #dbdbdb;
+        border: solid 2px gray;
+        border-radius: 19px;
+    }
+
+    .Visa4Digits {
+        font-size: x-large;
+        position: absolute;
+        margin: auto;
+        left: 112px;
+        right: auto;
+        top: 68px;
+    }
+
+</style>
